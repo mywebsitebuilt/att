@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Live Camera - Attendance Taking</h1>
+    <a href="{{ url_for('dashboard') }}" class="btn btn-secondary mb-3">Back to Dashboard</a>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="video-container">
+                <img src="{{ url_for('video_feed') }}" width="100%" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-3">
+        <div class="alert alert-info">
+            <strong>Instructions:</strong> 
+            <ul>
+                <li>Position your face clearly in front of the camera</li>
+                <li>Ensure proper lighting</li>
+                <li>System will automatically detect and mark attendance</li>
+                <li>Close this window when done</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
